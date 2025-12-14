@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Clubs</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://wallpapers.com/images/featured/dark-academia-background-1adaotb5w9lxeqi2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: rgb(226, 207, 184);
+            padding: 20px;
+            max-width: 500px;
+            margin: 40px auto;
+            border-radius: 10px;
+                  max-width: 600px;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+           box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+           border: 2px solid #3E0703; /* light purple border */
+        }
+        h1 {
+            text-align: center;
+            color: rgb(106, 23, 30);
+        }
+        select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+        .output {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+        }
+        button {
+            background: #f7dfc9;
+            border: 2px solid #8c3909;
+            border-radius: 12px;
+            color: #3E0703;
+            padding: 10px 20px;
+            transition: 0.3s;
+   }
+
+        label{
+            text-align: center;
+            color: rgb(106, 23, 30);
+
+        }
+
+        button:hover {
+           background: #FDACAC;
+   }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>School Club Information</h1>
+
+    <label>Select a Club:</label>
+<select id="club_select">
+    <option value="">-- Choose a club 🥳🌸 --</option>
+
+    <option value="Science Club">Science Club</option>
+    <option value="Math Club">Math Club</option>
+    <option value="Dance Club">Dance Club</option>
+    <option value="Marching Band">Marching Band</option>
+    <option value="Glee Club">Glee Club</option>
+    <option value="Communications Arts Club">Communications Arts Club</option>
+    <option value="Social Science Club">Social Science Club</option>
+    <option value="COCC">COCC (Cadet Officer Candidate Course)</option>
+    <option value="Volleyball Varsity">Volleyball Varsity</option>
+    <option value="Basketball Varsity">Basketball Varsity</option>
+</select>
+
+    <button py-click="show_club_info">Show Club Info</button>
+
+    <div class="output" id="club_output"></div>
+</div>
+
+<py-script src="./main.py"></py-script>
+</body>
+</html>
